@@ -213,6 +213,23 @@
             cursor: pointer;
         }
 
+        /* ========== ADMIN LOGIN BUTTON ========== */
+        .admin-login-btn {
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .admin-login-btn:hover {
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+
         /* ========== HERO SECTION ========== */
         .hero {
             min-height: 100vh;
@@ -607,6 +624,61 @@
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
         }
 
+        /* ========== WHATSAPP BOOKING MODAL ========== */
+        .whatsapp-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-modal {
+            background: var(--primary-dark);
+            width: 90%;
+            max-width: 500px;
+            border-radius: var(--border-radius);
+            border: 2px solid #25D366;
+            overflow: hidden;
+        }
+
+        .whatsapp-modal-header {
+            background: #25D366;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .whatsapp-modal-header h3 {
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .whatsapp-modal-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .whatsapp-modal-content p {
+            margin-bottom: 25px;
+            color: var(--text-secondary);
+        }
+
+        .whatsapp-modal-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
         /* ========== FLOATING WHATSAPP ========== */
         .floating-whatsapp {
             position: fixed;
@@ -679,6 +751,202 @@
             transform: scale(1.1);
         }
 
+        /* ========== ADMIN PANEL MODAL ========== */
+        .admin-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 2001;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .admin-modal {
+            background: var(--primary-dark);
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--accent-gold);
+            overflow: hidden;
+            display: none;
+        }
+
+        .admin-modal.active {
+            display: block;
+        }
+
+        .admin-header {
+            background: var(--secondary-dark);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .admin-header h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+        }
+
+        .admin-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .admin-close:hover {
+            color: var(--accent-orange);
+        }
+
+        .admin-tabs {
+            display: flex;
+            background: var(--secondary-dark);
+            border-bottom: 1px solid var(--glass-border);
+            overflow-x: auto;
+        }
+
+        .admin-tab {
+            padding: 15px 25px;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .admin-tab:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .admin-tab.active {
+            color: var(--accent-orange);
+            border-bottom: 2px solid var(--accent-orange);
+        }
+
+        .admin-content {
+            padding: 30px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .admin-section {
+            display: none;
+        }
+
+        .admin-section.active {
+            display: block;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .login-form h4 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--accent-gold);
+        }
+
+        .form-row {
+            margin-bottom: 20px;
+        }
+
+        .form-row label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .admin-table th, .admin-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .admin-table th {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .admin-table tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .edit-btn {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+        }
+
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        .view-btn {
+            background: #007bff;
+            color: white;
+        }
+
+        .testimonial-form, .service-form {
+            background: var(--glass-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+
+        .form-grid-admin {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* ========== BOOKING CONFIRMATION ========== */
+        .booking-confirmation {
+            background: var(--glass-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 20px;
+            border-left: 4px solid #25D366;
+        }
+
+        .booking-confirmation h4 {
+            color: #25D366;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         /* ========== RESPONSIVE DESIGN ========== */
         @media (max-width: 992px) {
             .features-grid,
@@ -746,6 +1014,23 @@
                 bottom: 170px;
                 right: 20px;
             }
+
+            .admin-modal {
+                width: 95%;
+            }
+
+            .form-grid-admin {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .whatsapp-modal-actions {
+                flex-direction: column;
+            }
         }
 
         @media (max-width: 576px) {
@@ -812,10 +1097,6 @@
                     <div class="logo-text">AS <span>Tour and Travels</span></div>
                 </a>
                 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#train" class="nav-link">Train</a></li>
@@ -826,6 +1107,15 @@
                     <li><a href="#visa" class="nav-link">Visa</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+                
+                <div>
+                    <button class="admin-login-btn" id="adminLoginBtn">
+                        <i class="fas fa-user-shield"></i> Admin
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -862,41 +1152,43 @@
                     <button class="tab-btn" data-tab="visa">Visa</button>
                 </div>
                 
-                <form class="booking-form">
+                <form class="booking-form" id="enquiryForm">
                     <div class="form-content active" id="train-form">
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="fullName">Full Name</label>
-                                <input type="text" id="fullName" class="form-input" placeholder="Enter your full name">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" class="form-input" placeholder="Enter your full name" required>
                             </div>
                             <div class="form-group">
-                                <label for="mobile">Mobile Number</label>
-                                <input type="tel" id="mobile" class="form-input" placeholder="Enter your mobile number">
+                                <label for="mobile">Mobile Number *</label>
+                                <input type="tel" id="mobile" class="form-input" placeholder="Enter your mobile number" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address</label>
                                 <input type="email" id="email" class="form-input" placeholder="Enter your email">
                             </div>
                             <div class="form-group">
-                                <label for="from">From Station</label>
-                                <input type="text" id="from" class="form-input" placeholder="Departure station">
+                                <label for="from">From Location *</label>
+                                <input type="text" id="from" class="form-input" placeholder="Departure location" required>
                             </div>
                             <div class="form-group">
-                                <label for="to">To Station</label>
-                                <input type="text" id="to" class="form-input" placeholder="Arrival station">
+                                <label for="to">To Location *</label>
+                                <input type="text" id="to" class="form-input" placeholder="Arrival location" required>
                             </div>
                             <div class="form-group">
-                                <label for="date">Travel Date</label>
-                                <input type="date" id="date" class="form-input">
+                                <label for="date">Travel Date *</label>
+                                <input type="date" id="date" class="form-input" required>
                             </div>
                             <div class="form-group">
-                                <label for="class">Class</label>
-                                <select id="class" class="form-input">
-                                    <option value="">Select class</option>
-                                    <option value="ac">AC First Class</option>
-                                    <option value="sleeper">Sleeper</option>
-                                    <option value="3ac">3rd AC</option>
-                                    <option value="2ac">2nd AC</option>
+                                <label for="serviceType">Service Type *</label>
+                                <select id="serviceType" class="form-input" required>
+                                    <option value="">Select service</option>
+                                    <option value="Train Booking">Train Booking</option>
+                                    <option value="Flight Booking">Flight Booking</option>
+                                    <option value="Cab Service">Cab Service</option>
+                                    <option value="Bus Tickets">Bus Tickets</option>
+                                    <option value="Tour Package">Tour Package</option>
+                                    <option value="Visa Assistance">Visa Assistance</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -906,6 +1198,7 @@
                                     <option value="2">2 Passengers</option>
                                     <option value="3">3 Passengers</option>
                                     <option value="4">4 Passengers</option>
+                                    <option value="5+">5+ Passengers</option>
                                 </select>
                             </div>
                             <div class="form-group full-width">
@@ -914,8 +1207,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Other forms would be similar with different fields -->
                     
                     <div class="form-submit">
                         <button type="submit" class="btn">Submit Enquiry</button>
@@ -962,61 +1253,15 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services-section">
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-title fade-in">
                 <h2>A World of Travel Services</h2>
                 <p>From a single ticket to a complex international tour, we handle all your travel needs</p>
             </div>
             
-            <div class="services-grid">
-                <div class="glass-card service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-train"></i>
-                    </div>
-                    <h3>Train Booking</h3>
-                    <p>Book IRCTC trains with instant confirmation and tatkal booking assistance.</p>
-                </div>
-                
-                <div class="glass-card service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <h3>Flight Booking</h3>
-                    <p>Domestic and international flights with best price guarantee and flexible dates.</p>
-                </div>
-                
-                <div class="glass-card service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3>Cab Service</h3>
-                    <p>Outstation and local cabs with verified drivers and transparent pricing.</p>
-                </div>
-                
-                <div class="glass-card service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-bus"></i>
-                    </div>
-                    <h3>Bus Tickets</h3>
-                    <p>Private and government bus tickets across all major routes in India.</p>
-                </div>
-                
-                <div class="glass-card service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-suitcase-rolling"></i>
-                    </div>
-                    <h3>Tour Packages</h3>
-                    <p>Customized domestic and international tour packages with hotel & guide.</p>
-                </div>
-                
-                <div class="glass-card service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-passport"></i>
-                    </div>
-                    <h3>Visa Assistance</h3>
-                    <p>End-to-end visa processing with documentation support for 50+ countries.</p>
-                </div>
+            <div class="services-grid" id="servicesContainer">
+                <!-- Services will be loaded dynamically from localStorage -->
             </div>
         </div>
     </section>
@@ -1029,60 +1274,8 @@
                 <p>See what our customers have to say about their experience with us</p>
             </div>
             
-            <div class="testimonials-grid">
-                <div class="glass-card testimonial-card fade-in">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Booked my Delhi to Goa flight and hotel package at 2 AM! Their 24/7 service is incredible. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RK</div>
-                        <div class="author-info">
-                            <h4>Rajesh Kumar</h4>
-                            <p>Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="glass-card testimonial-card fade-in">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text">"Their tatkal booking service is a lifesaver! Got confirmed tickets for my urgent trip to Chennai at midnight."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SP</div>
-                        <div class="author-info">
-                            <h4>Priya Sharma</h4>
-                            <p>Delhi</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="glass-card testimonial-card fade-in">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Visited Thailand with their tour package. Everything was perfectly arranged. Will definitely book my Europe trip with them."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AM</div>
-                        <div class="author-info">
-                            <h4>Amit Mehta</h4>
-                            <p>Bangalore</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="testimonials-grid" id="testimonialsContainer">
+                <!-- Testimonials will be loaded dynamically from localStorage -->
             </div>
         </div>
     </section>
@@ -1110,7 +1303,7 @@
                     </div>
                     <p>Your trusted partner for all travel needs since 2010. We provide seamless booking experience with guaranteed best prices and 24/7 customer support.</p>
                     <div class="badge-24-7" style="margin: 15px 0;">24/7 OPEN</div>
-                    <a href="https://wa.me/918319920776" class="whatsapp-btn" target="_blank">
+                    <a href="https://wa.me/918319920776" class="whatsapp-btn" target="_blank" id="footerWhatsApp">
                         <i class="fab fa-whatsapp"></i> WhatsApp: +91 83199 20776
                     </a>
                     <a href="tel:+918319920776" class="phone-call-btn">
@@ -1123,13 +1316,8 @@
                 
                 <div class="footer-services">
                     <h3 class="footer-heading">Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#train">Train Ticket Booking</a></li>
-                        <li><a href="#flight">Flight Booking</a></li>
-                        <li><a href="#cab">Cab & Car Rental</a></li>
-                        <li><a href="#bus">Bus Tickets</a></li>
-                        <li><a href="#tours">Tour Packages</a></li>
-                        <li><a href="#visa">Visa Assistance</a></li>
+                    <ul class="footer-links" id="footerServices">
+                        <!-- Services links loaded dynamically -->
                     </ul>
                 </div>
                 
@@ -1162,6 +1350,123 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Booking Modal -->
+    <div class="whatsapp-modal-overlay" id="whatsappModalOverlay">
+        <div class="whatsapp-modal">
+            <div class="whatsapp-modal-header">
+                <h3><i class="fab fa-whatsapp"></i> Share Booking on WhatsApp</h3>
+            </div>
+            <div class="whatsapp-modal-content">
+                <p>Your booking details have been saved! Click below to share them on WhatsApp for instant confirmation and faster response.</p>
+                <div id="whatsappMessagePreview" style="background: var(--glass-bg); padding: 15px; border-radius: var(--border-radius); margin: 20px 0; text-align: left; font-size: 0.9rem; color: var(--text-secondary);"></div>
+                <div class="whatsapp-modal-actions">
+                    <a href="#" class="btn" id="shareWhatsAppBtn" target="_blank" style="background: #25D366;">
+                        <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                    </a>
+                    <button class="btn btn-secondary" id="closeWhatsAppModal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="admin-modal-overlay" id="adminModalOverlay">
+        <div class="admin-modal" id="adminModal">
+            <div class="admin-header">
+                <h3><i class="fas fa-user-shield"></i> Admin Control Panel</h3>
+                <button class="admin-close" id="adminCloseBtn">&times;</button>
+            </div>
+            
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="login">Login</button>
+                <button class="admin-tab" data-tab="enquiries">Enquiries</button>
+                <button class="admin-tab" data-tab="testimonials">Testimonials</button>
+                <button class="admin-tab" data-tab="services">Services</button>
+                <button class="admin-tab" data-tab="stats">Statistics</button>
+            </div>
+            
+            <div class="admin-content">
+                <!-- Login Section -->
+                <div class="admin-section active" id="loginSection">
+                    <div class="login-form">
+                        <h4>Admin Login</h4>
+                        <div class="form-row">
+                            <label for="adminEmail">Admin Email</label>
+                            <input type="email" id="adminEmail" class="form-input" placeholder="Enter admin email">
+                        </div>
+                        <div class="form-row">
+                            <label for="adminPassword">Password</label>
+                            <input type="password" id="adminPassword" class="form-input" placeholder="Enter password">
+                        </div>
+                        <div class="form-row">
+                            <button class="btn" id="adminLoginSubmit">Login</button>
+                        </div>
+                        <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin-top: 20px;">
+                            <i class="fas fa-info-circle"></i> Default: Sandesh@gmail.com / Sandesh@5555
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Enquiries Section -->
+                <div class="admin-section" id="enquiriesSection">
+                    <h4 style="margin-bottom: 20px; color: var(--accent-gold);">Customer Enquiries</h4>
+                    <div id="enquiriesList">
+                        <!-- Enquiries loaded dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Testimonials Section -->
+                <div class="admin-section" id="testimonialsSection">
+                    <h4 style="margin-bottom: 20px; color: var(--accent-gold);">Manage Testimonials</h4>
+                    
+                    <div class="testimonial-form">
+                        <h5>Add New Testimonial</h5>
+                        <div class="form-grid-admin">
+                            <div class="form-row">
+                                <label for="testimonialName">Customer Name</label>
+                                <input type="text" id="testimonialName" class="form-input" placeholder="Customer name">
+                            </div>
+                            <div class="form-row">
+                                <label for="testimonialCity">City</label>
+                                <input type="text" id="testimonialCity" class="form-input" placeholder="Customer city">
+                            </div>
+                            <div class="form-row">
+                                <label for="testimonialRating">Rating (1-5)</label>
+                                <input type="number" id="testimonialRating" class="form-input" min="1" max="5" value="5">
+                            </div>
+                            <div class="form-row">
+                                <label for="testimonialText">Testimonial Text</label>
+                                <textarea id="testimonialText" class="form-input" placeholder="Customer testimonial"></textarea>
+                            </div>
+                        </div>
+                        <button class="btn" id="addTestimonialBtn">Add Testimonial</button>
+                    </div>
+                    
+                    <div id="testimonialsAdminList">
+                        <!-- Testimonials list for editing -->
+                    </div>
+                </div>
+                
+                <!-- Services Section -->
+                <div class="admin-section" id="servicesSection">
+                    <h4 style="margin-bottom: 20px; color: var(--accent-gold);">Manage Services</h4>
+                    
+                    <div id="servicesAdminList">
+                        <!-- Services list for editing -->
+                    </div>
+                </div>
+                
+                <!-- Statistics Section -->
+                <div class="admin-section" id="statsSection">
+                    <h4 style="margin-bottom: 20px; color: var(--accent-gold);">Booking Statistics</h4>
+                    <div id="statsContainer" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                        <!-- Stats will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating Email Button -->
     <a href="mailto:guptasandesh006@gmail.com" class="floating-email">
         <i class="fas fa-envelope"></i>
@@ -1173,97 +1478,785 @@
     </a>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/918319920776" class="floating-whatsapp" target="_blank">
+    <a href="https://wa.me/918319920776" class="floating-whatsapp" target="_blank" id="mainWhatsAppBtn">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Tab Switching for Booking Form
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-            });
-        });
-        
-        // Navbar Active State on Scroll
-        const sections = document.querySelectorAll('section[id], header');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const scrollPos = window.scrollY + 100;
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-        
-        // Fade In on Scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInOnScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('visible');
-                }
-            });
+        // ========== LOCAL STORAGE DATA MANAGEMENT ==========
+        const STORAGE_KEYS = {
+            ENQUIRIES: 'as_travel_enquiries',
+            TESTIMONIALS: 'as_travel_testimonials',
+            SERVICES: 'as_travel_services',
+            ADMIN_LOGGED_IN: 'as_travel_admin_logged_in',
+            BOOKING_COUNT: 'as_travel_booking_count'
         };
+
+        // Default testimonials data
+        const defaultTestimonials = [
+            {
+                id: 1,
+                name: "Rajesh Kumar",
+                city: "Mumbai",
+                rating: 5,
+                text: "Booked my Delhi to Goa flight and hotel package at 2 AM! Their 24/7 service is incredible. Highly recommended!"
+            },
+            {
+                id: 2,
+                name: "Priya Sharma",
+                city: "Delhi",
+                rating: 4.5,
+                text: "Their tatkal booking service is a lifesaver! Got confirmed tickets for my urgent trip to Chennai at midnight."
+            },
+            {
+                id: 3,
+                name: "Amit Mehta",
+                city: "Bangalore",
+                rating: 5,
+                text: "Visited Thailand with their tour package. Everything was perfectly arranged. Will definitely book my Europe trip with them."
+            }
+        ];
+
+        // Default services data
+        const defaultServices = [
+            {
+                id: 1,
+                title: "Train Booking",
+                description: "Book IRCTC trains with instant confirmation and tatkal booking assistance.",
+                icon: "fas fa-train"
+            },
+            {
+                id: 2,
+                title: "Flight Booking",
+                description: "Domestic and international flights with best price guarantee and flexible dates.",
+                icon: "fas fa-plane"
+            },
+            {
+                id: 3,
+                title: "Cab Service",
+                description: "Outstation and local cabs with verified drivers and transparent pricing.",
+                icon: "fas fa-car"
+            },
+            {
+                id: 4,
+                title: "Bus Tickets",
+                description: "Private and government bus tickets across all major routes in India.",
+                icon: "fas fa-bus"
+            },
+            {
+                id: 5,
+                title: "Tour Packages",
+                description: "Customized domestic and international tour packages with hotel & guide.",
+                icon: "fas fa-suitcase-rolling"
+            },
+            {
+                id: 6,
+                title: "Visa Assistance",
+                description: "End-to-end visa processing with documentation support for 50+ countries.",
+                icon: "fas fa-passport"
+            }
+        ];
+
+        // Initialize localStorage data
+        function initializeStorage() {
+            if (!localStorage.getItem(STORAGE_KEYS.TESTIMONIALS)) {
+                localStorage.setItem(STORAGE_KEYS.TESTIMONIALS, JSON.stringify(defaultTestimonials));
+            }
+            
+            if (!localStorage.getItem(STORAGE_KEYS.SERVICES)) {
+                localStorage.setItem(STORAGE_KEYS.SERVICES, JSON.stringify(defaultServices));
+            }
+            
+            if (!localStorage.getItem(STORAGE_KEYS.ENQUIRIES)) {
+                localStorage.setItem(STORAGE_KEYS.ENQUIRIES, JSON.stringify([]));
+            }
+            
+            if (!localStorage.getItem(STORAGE_KEYS.BOOKING_COUNT)) {
+                localStorage.setItem(STORAGE_KEYS.BOOKING_COUNT, '0');
+            }
+        }
+
+        // Get data from localStorage
+        function getEnquiries() {
+            return JSON.parse(localStorage.getItem(STORAGE_KEYS.ENQUIRIES)) || [];
+        }
+
+        function getTestimonials() {
+            return JSON.parse(localStorage.getItem(STORAGE_KEYS.TESTIMONIALS)) || [];
+        }
+
+        function getServices() {
+            return JSON.parse(localStorage.getItem(STORAGE_KEYS.SERVICES)) || [];
+        }
+
+        function getBookingCount() {
+            return parseInt(localStorage.getItem(STORAGE_KEYS.BOOKING_COUNT)) || 0;
+        }
+
+        // Save data to localStorage
+        function saveEnquiries(enquiries) {
+            localStorage.setItem(STORAGE_KEYS.ENQUIRIES, JSON.stringify(enquiries));
+        }
+
+        function saveTestimonials(testimonials) {
+            localStorage.setItem(STORAGE_KEYS.TESTIMONIALS, JSON.stringify(testimonials));
+        }
+
+        function saveServices(services) {
+            localStorage.setItem(STORAGE_KEYS.SERVICES, JSON.stringify(services));
+        }
+
+        function incrementBookingCount() {
+            const count = getBookingCount() + 1;
+            localStorage.setItem(STORAGE_KEYS.BOOKING_COUNT, count.toString());
+            return count;
+        }
+
+        // ========== DOM ELEMENTS ==========
+        const adminModalOverlay = document.getElementById('adminModalOverlay');
+        const adminModal = document.getElementById('adminModal');
+        const adminLoginBtn = document.getElementById('adminLoginBtn');
+        const adminCloseBtn = document.getElementById('adminCloseBtn');
+        const adminTabs = document.querySelectorAll('.admin-tab');
+        const adminSections = document.querySelectorAll('.admin-section');
+        const adminLoginSubmit = document.getElementById('adminLoginSubmit');
+        const enquiriesSection = document.getElementById('enquiriesSection');
+        const testimonialsSection = document.getElementById('testimonialsSection');
+        const servicesSection = document.getElementById('servicesSection');
+        const statsSection = document.getElementById('statsSection');
+        const addTestimonialBtn = document.getElementById('addTestimonialBtn');
+        const enquiryForm = document.getElementById('enquiryForm');
         
-        // Initial check
-        fadeInOnScroll();
-        
-        // Check on scroll
-        window.addEventListener('scroll', fadeInOnScroll);
-        
-        // Form Submission (Frontend Only - No Backend)
-        document.querySelector('.booking-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your enquiry! Our travel expert will contact you shortly on +91 83199 20776 or guptasandesh006@gmail.com');
-            this.reset();
+        // WhatsApp Modal Elements
+        const whatsappModalOverlay = document.getElementById('whatsappModalOverlay');
+        const whatsappMessagePreview = document.getElementById('whatsappMessagePreview');
+        const shareWhatsAppBtn = document.getElementById('shareWhatsAppBtn');
+        const closeWhatsAppModal = document.getElementById('closeWhatsAppModal');
+        const mainWhatsAppBtn = document.getElementById('mainWhatsAppBtn');
+        const footerWhatsApp = document.getElementById('footerWhatsApp');
+
+        // ========== ADMIN PANEL FUNCTIONS ==========
+        let isAdminLoggedIn = localStorage.getItem(STORAGE_KEYS.ADMIN_LOGGED_IN) === 'true';
+
+        // Open admin panel
+        adminLoginBtn.addEventListener('click', () => {
+            adminModalOverlay.style.display = 'flex';
+            adminModal.classList.add('active');
+            
+            if (isAdminLoggedIn) {
+                switchAdminTab('enquiries');
+                loadEnquiries();
+                loadTestimonialsAdmin();
+                loadServicesAdmin();
+                loadStats();
+            } else {
+                switchAdminTab('login');
+            }
         });
 
-        // Show current year in footer
-        document.addEventListener('DOMContentLoaded', function() {
+        // Close admin panel
+        adminCloseBtn.addEventListener('click', () => {
+            adminModalOverlay.style.display = 'none';
+            adminModal.classList.remove('active');
+        });
+
+        // Close admin panel when clicking outside
+        adminModalOverlay.addEventListener('click', (e) => {
+            if (e.target === adminModalOverlay) {
+                adminModalOverlay.style.display = 'none';
+                adminModal.classList.remove('active');
+            }
+        });
+
+        // Switch admin tabs
+        adminTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.dataset.tab;
+                if (tabName === 'login' || isAdminLoggedIn) {
+                    switchAdminTab(tabName);
+                    if (tabName === 'enquiries') loadEnquiries();
+                    if (tabName === 'testimonials') loadTestimonialsAdmin();
+                    if (tabName === 'services') loadServicesAdmin();
+                    if (tabName === 'stats') loadStats();
+                } else {
+                    switchAdminTab('login');
+                }
+            });
+        });
+
+        function switchAdminTab(tabName) {
+            // Update active tab
+            adminTabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.dataset.tab === tabName) {
+                    tab.classList.add('active');
+                }
+            });
+
+            // Update active section
+            adminSections.forEach(section => {
+                section.classList.remove('active');
+                if (section.id === `${tabName}Section`) {
+                    section.classList.add('active');
+                }
+            });
+        }
+
+        // Admin login
+        adminLoginSubmit.addEventListener('click', () => {
+            const email = document.getElementById('adminEmail').value;
+            const password = document.getElementById('adminPassword').value;
+            
+            if (email === 'Sandesh@gmail.com' && password === 'Sandesh@5555') {
+                isAdminLoggedIn = true;
+                localStorage.setItem(STORAGE_KEYS.ADMIN_LOGGED_IN, 'true');
+                switchAdminTab('enquiries');
+                loadEnquiries();
+                loadTestimonialsAdmin();
+                loadServicesAdmin();
+                loadStats();
+            } else {
+                alert('Invalid email or password!');
+            }
+        });
+
+        // ========== ENQUIRIES MANAGEMENT ==========
+        function loadEnquiries() {
+            const enquiries = getEnquiries();
+            const enquiriesList = document.getElementById('enquiriesList');
+            
+            if (enquiries.length === 0) {
+                enquiriesList.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No enquiries yet.</p>';
+                return;
+            }
+
+            let html = `
+                <p style="margin-bottom: 15px; color: var(--text-secondary);">Total Enquiries: ${enquiries.length}</p>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Name</th>
+                            <th>Mobile</th>
+                            <th>Service</th>
+                            <th>From → To</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            enquiries.forEach((enquiry, index) => {
+                const date = new Date(enquiry.timestamp).toLocaleDateString('en-IN');
+                const time = new Date(enquiry.timestamp).toLocaleTimeString('en-IN', {hour: '2-digit', minute:'2-digit'});
+                const status = enquiry.status || 'New';
+                const statusColor = status === 'New' ? '#ff6b35' : status === 'Confirmed' ? '#25D366' : '#d4af37';
+                
+                html += `
+                    <tr>
+                        <td>${date}<br><small>${time}</small></td>
+                        <td>${enquiry.name}</td>
+                        <td><a href="tel:${enquiry.mobile}">${enquiry.mobile}</a></td>
+                        <td>${enquiry.serviceType}</td>
+                        <td>${enquiry.from} → ${enquiry.to}</td>
+                        <td><span style="color: ${statusColor}; font-weight: 600;">${status}</span></td>
+                        <td>
+                            <button class="action-btn view-btn" onclick="viewEnquiry(${index})">View</button>
+                            <button class="action-btn edit-btn" onclick="updateEnquiryStatus(${index})">Status</button>
+                            <button class="action-btn delete-btn" onclick="deleteEnquiry(${index})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += `</tbody></table>`;
+            enquiriesList.innerHTML = html;
+        }
+
+        function viewEnquiry(index) {
+            const enquiries = getEnquiries();
+            const enquiry = enquiries[index];
+            
+            let html = `
+                <div class="booking-confirmation">
+                    <h4><i class="fas fa-info-circle"></i> Enquiry Details</h4>
+                    <p><strong>Date:</strong> ${new Date(enquiry.timestamp).toLocaleString('en-IN')}</p>
+                    <p><strong>Name:</strong> ${enquiry.name}</p>
+                    <p><strong>Mobile:</strong> <a href="tel:${enquiry.mobile}" style="color: var(--accent-gold);">${enquiry.mobile}</a></p>
+                    <p><strong>Email:</strong> ${enquiry.email || 'Not provided'}</p>
+                    <p><strong>Service Type:</strong> ${enquiry.serviceType}</p>
+                    <p><strong>From:</strong> ${enquiry.from}</p>
+                    <p><strong>To:</strong> ${enquiry.to}</p>
+                    <p><strong>Travel Date:</strong> ${enquiry.date}</p>
+                    <p><strong>Passengers:</strong> ${enquiry.passengers}</p>
+                    <p><strong>Message:</strong> ${enquiry.message || 'No additional message'}</p>
+                    <p><strong>Status:</strong> ${enquiry.status || 'New'}</p>
+                </div>
+            `;
+            
+            alert(html.replace(/<[^>]*>/g, ''));
+        }
+
+        function updateEnquiryStatus(index) {
+            const enquiries = getEnquiries();
+            const currentStatus = enquiries[index].status || 'New';
+            
+            const newStatus = prompt('Update enquiry status (New, Confirmed, In Progress, Completed):', currentStatus);
+            
+            if (newStatus && ['New', 'Confirmed', 'In Progress', 'Completed'].includes(newStatus)) {
+                enquiries[index].status = newStatus;
+                saveEnquiries(enquiries);
+                loadEnquiries();
+                alert('Status updated successfully!');
+            }
+        }
+
+        function deleteEnquiry(index) {
+            if (confirm('Are you sure you want to delete this enquiry?')) {
+                const enquiries = getEnquiries();
+                enquiries.splice(index, 1);
+                saveEnquiries(enquiries);
+                loadEnquiries();
+            }
+        }
+
+        // ========== TESTIMONIALS MANAGEMENT ==========
+        function loadTestimonials() {
+            const testimonials = getTestimonials();
+            const container = document.getElementById('testimonialsContainer');
+            
+            let html = '';
+            testimonials.forEach(testimonial => {
+                let stars = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= testimonial.rating) {
+                        stars += '<i class="fas fa-star"></i>';
+                    } else if (i - 0.5 === testimonial.rating) {
+                        stars += '<i class="fas fa-star-half-alt"></i>';
+                    } else {
+                        stars += '<i class="far fa-star"></i>';
+                    }
+                }
+                
+                html += `
+                    <div class="glass-card testimonial-card fade-in">
+                        <div class="stars">${stars}</div>
+                        <p class="testimonial-text">"${testimonial.text}"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">${testimonial.name.charAt(0)}</div>
+                            <div class="author-info">
+                                <h4>${testimonial.name}</h4>
+                                <p>${testimonial.city}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function loadTestimonialsAdmin() {
+            const testimonials = getTestimonials();
+            const container = document.getElementById('testimonialsAdminList');
+            
+            let html = '<h5 style="margin-top: 30px; margin-bottom: 15px;">Existing Testimonials</h5>';
+            
+            if (testimonials.length === 0) {
+                html += '<p style="color: var(--text-secondary);">No testimonials yet.</p>';
+            } else {
+                testimonials.forEach((testimonial, index) => {
+                    html += `
+                        <div class="testimonial-form" style="margin-top: 15px;">
+                            <div class="form-grid-admin">
+                                <div class="form-row">
+                                    <label>Customer Name</label>
+                                    <input type="text" class="form-input testimonial-edit-name" value="${testimonial.name}" data-index="${index}">
+                                </div>
+                                <div class="form-row">
+                                    <label>City</label>
+                                    <input type="text" class="form-input testimonial-edit-city" value="${testimonial.city}" data-index="${index}">
+                                </div>
+                                <div class="form-row">
+                                    <label>Rating (1-5)</label>
+                                    <input type="number" class="form-input testimonial-edit-rating" min="1" max="5" value="${testimonial.rating}" data-index="${index}">
+                                </div>
+                                <div class="form-row">
+                                    <label>Testimonial Text</label>
+                                    <textarea class="form-input testimonial-edit-text" data-index="${index}">${testimonial.text}</textarea>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                <button class="btn" onclick="updateTestimonial(${index})">Update</button>
+                                <button class="btn delete-btn" onclick="deleteTestimonial(${index})">Delete</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            
+            container.innerHTML = html;
+        }
+
+        function addTestimonial() {
+            const name = document.getElementById('testimonialName').value;
+            const city = document.getElementById('testimonialCity').value;
+            const rating = parseFloat(document.getElementById('testimonialRating').value);
+            const text = document.getElementById('testimonialText').value;
+            
+            if (!name || !city || !rating || !text) {
+                alert('Please fill all fields!');
+                return;
+            }
+            
+            const testimonials = getTestimonials();
+            const newId = testimonials.length > 0 ? Math.max(...testimonials.map(t => t.id)) + 1 : 1;
+            
+            testimonials.push({
+                id: newId,
+                name,
+                city,
+                rating,
+                text
+            });
+            
+            saveTestimonials(testimonials);
+            loadTestimonials();
+            loadTestimonialsAdmin();
+            
+            // Clear form
+            document.getElementById('testimonialName').value = '';
+            document.getElementById('testimonialCity').value = '';
+            document.getElementById('testimonialRating').value = '5';
+            document.getElementById('testimonialText').value = '';
+            
+            alert('Testimonial added successfully!');
+        }
+
+        function updateTestimonial(index) {
+            const testimonials = getTestimonials();
+            
+            const nameInput = document.querySelector(`.testimonial-edit-name[data-index="${index}"]`);
+            const cityInput = document.querySelector(`.testimonial-edit-city[data-index="${index}"]`);
+            const ratingInput = document.querySelector(`.testimonial-edit-rating[data-index="${index}"]`);
+            const textInput = document.querySelector(`.testimonial-edit-text[data-index="${index}"]`);
+            
+            if (!nameInput || !cityInput || !ratingInput || !textInput) {
+                alert('Error: Form fields not found!');
+                return;
+            }
+            
+            testimonials[index].name = nameInput.value;
+            testimonials[index].city = cityInput.value;
+            testimonials[index].rating = parseFloat(ratingInput.value);
+            testimonials[index].text = textInput.value;
+            
+            saveTestimonials(testimonials);
+            loadTestimonials();
+            alert('Testimonial updated successfully!');
+        }
+
+        function deleteTestimonial(index) {
+            if (confirm('Are you sure you want to delete this testimonial?')) {
+                const testimonials = getTestimonials();
+                testimonials.splice(index, 1);
+                saveTestimonials(testimonials);
+                loadTestimonials();
+                loadTestimonialsAdmin();
+            }
+        }
+
+        // ========== SERVICES MANAGEMENT ==========
+        function loadServices() {
+            const services = getServices();
+            const container = document.getElementById('servicesContainer');
+            const footerServices = document.getElementById('footerServices');
+            
+            let servicesHtml = '';
+            let footerHtml = '';
+            
+            services.forEach(service => {
+                servicesHtml += `
+                    <div class="glass-card service-card fade-in">
+                        <div class="service-icon">
+                            <i class="${service.icon}"></i>
+                        </div>
+                        <h3>${service.title}</h3>
+                        <p>${service.description}</p>
+                    </div>
+                `;
+                
+                footerHtml += `<li><a href="#services">${service.title}</a></li>`;
+            });
+            
+            container.innerHTML = servicesHtml;
+            footerServices.innerHTML = footerHtml;
+        }
+
+        function loadServicesAdmin() {
+            const services = getServices();
+            const container = document.getElementById('servicesAdminList');
+            
+            let html = '';
+            
+            services.forEach((service, index) => {
+                html += `
+                    <div class="service-form">
+                        <h5>${service.title}</h5>
+                        <div class="form-grid-admin">
+                            <div class="form-row">
+                                <label>Service Title</label>
+                                <input type="text" class="form-input service-edit-title" value="${service.title}" data-index="${index}">
+                            </div>
+                            <div class="form-row">
+                                <label>Icon Class (FontAwesome)</label>
+                                <input type="text" class="form-input service-edit-icon" value="${service.icon}" data-index="${index}">
+                            </div>
+                            <div class="form-row">
+                                <label>Description</label>
+                                <textarea class="form-input service-edit-desc" data-index="${index}">${service.description}</textarea>
+                            </div>
+                        </div>
+                        <button class="btn" onclick="updateService(${index})">Update Service</button>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function updateService(index) {
+            const services = getServices();
+            
+            const titleInput = document.querySelector(`.service-edit-title[data-index="${index}"]`);
+            const iconInput = document.querySelector(`.service-edit-icon[data-index="${index}"]`);
+            const descInput = document.querySelector(`.service-edit-desc[data-index="${index}"]`);
+            
+            if (!titleInput || !iconInput || !descInput) {
+                alert('Error: Form fields not found!');
+                return;
+            }
+            
+            services[index].title = titleInput.value;
+            services[index].icon = iconInput.value;
+            services[index].description = descInput.value;
+            
+            saveServices(services);
+            loadServices();
+            alert('Service updated successfully!');
+        }
+
+        // ========== STATISTICS MANAGEMENT ==========
+        function loadStats() {
+            const enquiries = getEnquiries();
+            const bookingCount = getBookingCount();
+            const statsContainer = document.getElementById('statsContainer');
+            
+            const totalEnquiries = enquiries.length;
+            const newEnquiries = enquiries.filter(e => e.status === 'New' || !e.status).length;
+            const confirmedEnquiries = enquiries.filter(e => e.status === 'Confirmed').length;
+            
+            const stats = [
+                { title: 'Total Bookings', value: bookingCount, icon: 'fas fa-calendar-check', color: '#ff6b35' },
+                { title: 'Total Enquiries', value: totalEnquiries, icon: 'fas fa-envelope', color: '#d4af37' },
+                { title: 'New Enquiries', value: newEnquiries, icon: 'fas fa-bell', color: '#25D366' },
+                { title: 'Confirmed', value: confirmedEnquiries, icon: 'fas fa-check-circle', color: '#007bff' },
+                { title: 'Testimonials', value: getTestimonials().length, icon: 'fas fa-star', color: '#ffc107' },
+                { title: 'Services', value: getServices().length, icon: 'fas fa-concierge-bell', color: '#6f42c1' }
+            ];
+            
+            let html = '';
+            stats.forEach(stat => {
+                html += `
+                    <div class="glass-card" style="text-align: center; padding: 25px 15px;">
+                        <div class="feature-icon" style="color: ${stat.color}">
+                            <i class="${stat.icon}"></i>
+                        </div>
+                        <h3 style="font-size: 2.5rem; margin: 15px 0; color: ${stat.color}">${stat.value}</h3>
+                        <p style="color: var(--text-secondary); font-weight: 500;">${stat.title}</p>
+                    </div>
+                `;
+            });
+            
+            statsContainer.innerHTML = html;
+        }
+
+        // ========== WHATSAPP FUNCTIONALITY ==========
+        function formatWhatsAppMessage(enquiry) {
+            return `*NEW TRAVEL ENQUIRY - AS TOUR AND TRAVELS*%0A%0A` +
+                   `*Name:* ${enquiry.name}%0A` +
+                   `*Mobile:* ${enquiry.mobile}%0A` +
+                   `*Email:* ${enquiry.email || 'Not provided'}%0A` +
+                   `*Service:* ${enquiry.serviceType}%0A` +
+                   `*From:* ${enquiry.from}%0A` +
+                   `*To:* ${enquiry.to}%0A` +
+                   `*Travel Date:* ${enquiry.date}%0A` +
+                   `*Passengers:* ${enquiry.passengers}%0A` +
+                   `*Message:* ${enquiry.message || 'No additional message'}%0A%0A` +
+                   `*Submitted:* ${new Date(enquiry.timestamp).toLocaleString('en-IN')}%0A%0A` +
+                   `_This enquiry has been automatically saved in the admin panel._`;
+        }
+
+        function showWhatsAppModal(enquiry) {
+            whatsappModalOverlay.style.display = 'flex';
+            const message = formatWhatsAppMessage(enquiry);
+            whatsappMessagePreview.textContent = decodeURIComponent(message).replace(/%0A/g, '\n');
+            
+            // Update WhatsApp link
+            const whatsappUrl = `https://wa.me/918319920776?text=${formatWhatsAppMessage(enquiry)}`;
+            shareWhatsAppBtn.href = whatsappUrl;
+        }
+
+        // Close WhatsApp modal
+        closeWhatsAppModal.addEventListener('click', () => {
+            whatsappModalOverlay.style.display = 'none';
+        });
+
+        whatsappModalOverlay.addEventListener('click', (e) => {
+            if (e.target === whatsappModalOverlay) {
+                whatsappModalOverlay.style.display = 'none';
+            }
+        });
+
+        // Update main WhatsApp buttons to include booking template
+        function updateWhatsAppButtons() {
+            const defaultMessage = `Hello AS Tour and Travels! I'd like to enquire about travel services.`;
+            const encodedMessage = encodeURIComponent(defaultMessage);
+            
+            // Update floating WhatsApp button
+            mainWhatsAppBtn.href = `https://wa.me/918319920776?text=${encodedMessage}`;
+            
+            // Update footer WhatsApp button
+            footerWhatsApp.href = `https://wa.me/918319920776?text=${encodedMessage}`;
+        }
+
+        // ========== ENQUIRY FORM SUBMISSION ==========
+        enquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const enquiries = getEnquiries();
+            const newId = enquiries.length > 0 ? Math.max(...enquiries.map(e => e.id)) + 1 : 1;
+            
+            const enquiry = {
+                id: newId,
+                timestamp: new Date().toISOString(),
+                name: document.getElementById('fullName').value,
+                mobile: document.getElementById('mobile').value,
+                email: document.getElementById('email').value,
+                from: document.getElementById('from').value,
+                to: document.getElementById('to').value,
+                date: document.getElementById('date').value,
+                serviceType: document.getElementById('serviceType').value,
+                passengers: document.getElementById('passengers').value,
+                message: document.getElementById('message').value,
+                status: 'New'
+            };
+            
+            enquiries.push(enquiry);
+            saveEnquiries(enquiries);
+            incrementBookingCount();
+            
+            // Show WhatsApp modal
+            showWhatsAppModal(enquiry);
+            
+            // Reset form
+            this.reset();
+            
+            // If admin is logged in and viewing enquiries, refresh the list
+            if (isAdminLoggedIn && enquiriesSection.classList.contains('active')) {
+                loadEnquiries();
+            }
+            
+            // Update stats if admin panel is open
+            if (isAdminLoggedIn) {
+                loadStats();
+            }
+        });
+
+        // ========== EVENT LISTENERS ==========
+        addTestimonialBtn.addEventListener('click', addTestimonial);
+
+        // ========== INITIALIZATION ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeStorage();
+            loadTestimonials();
+            loadServices();
+            updateWhatsAppButtons();
+            
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Tab Switching for Booking Form
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                });
+            });
+            
+            // Navbar Active State on Scroll
+            const sections = document.querySelectorAll('section[id], header');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const scrollPos = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Fade In on Scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = () => {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+            
+            fadeInOnScroll();
+            window.addEventListener('scroll', fadeInOnScroll);
+            
+            // Show current year in footer
             const yearSpan = document.querySelector('.current-year');
             if (yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
